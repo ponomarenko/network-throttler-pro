@@ -34,7 +34,7 @@ A powerful Chrome extension for simulating poor network conditions with advanced
 ### Development Installation
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/network-throttler-pro.git
+   git clone https://github.com/ponomarenko/network-throttler-pro.git
    cd network-throttler-pro
    ```
 2. Load the extension in Chrome:
