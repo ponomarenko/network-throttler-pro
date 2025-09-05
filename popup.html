@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Network Throttler Pro</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1>Network Throttler Pro</h1>
+      <div class="status">
+        <span id="status-indicator" class="status-indicator"></span>
+        <span id="status-text">Disabled</span>
+      </div>
+    </div>
+
+    <!-- Main Toggle -->
+    <div class="toggle-section">
+      <label class="toggle">
+        <input type="checkbox" id="main-toggle">
+        <span class="slider"></span>
+      </label>
+      <span class="toggle-label">Enable Throttling</span>
+    </div>
+
+    <!-- Basic Settings -->
+    <div class="section">
+      <h3>Basic Settings</h3>
+      
+      <div class="setting-group">
+        <label for="avg-speed">Average Speed (KB/s):</label>
+        <div class="input-with-display">
+          <input type="range" id="avg-speed" min="1" max="1000" value="50">
+          <span id="avg-speed-value">50</span>
+        </div>
+      </div>
+
+      <div class="setting-group">
+        <label for="speed-variation">Speed Variation (±KB/s):</label>
+        <div class="input-with-display">
+          <input type="range" id="speed-variation" min="0" max="200" value="30">
+          <span id="speed-variation-value">30</span>
+        </div>
+      </div>
+
+      <div class="setting-group">
+        <label for="latency">Base Latency (ms):</label>
+        <div class="input-with-display">
+          <input type="range" id="latency" min="0" max="2000" value="100">
+          <span id="latency-value">100</span>
+        </div>
+      </div>
+
+      <div class="setting-group">
+        <label for="latency-variation">Latency Variation (±ms):</label>
+        <div class="input-with-display">
+          <input type="range" id="latency-variation" min="0" max="500" value="50">
+          <span id="latency-variation-value">50</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Custom Rules -->
+    <div class="section">
+      <h3>Custom Rules</h3>
+      <div class="rules-container" id="rules-container">
+        <!-- Rules will be dynamically added here -->
+      </div>
+      <button id="add-rule" class="btn btn-secondary">+ Add Rule</button>
+    </div>
+
+    <!-- Presets -->
+    <div class="section">
+      <h3>Quick Presets</h3>
+      <div class="presets">
+        <button class="preset-btn" data-preset="slow-3g">Slow 3G</button>
+        <button class="preset-btn" data-preset="fast-3g">Fast 3G</button>
+        <button class="preset-btn" data-preset="slow-4g">Slow 4G</button>
+        <button class="preset-btn" data-preset="wifi">Slow WiFi</button>
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="save-settings" class="btn btn-primary">Save Settings</button>
+      <button id="reset-settings" class="btn btn-danger">Reset to Default</button>
+    </div>
+
+    <!-- Statistics -->
+    <div class="stats" id="stats">
+      <small>Active sessions: <span id="active-sessions">0</span></small>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

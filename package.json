@@ -1,0 +1,34 @@
+{
+  "name": "network-throttler-pro",
+  "version": "1.0.0",
+  "description": "Advanced Chrome extension for network throttling with flexible speed control and endpoint-specific rules",
+  "keywords": [
+    "chrome-extension",
+    "network-throttling",
+    "web-development",
+    "testing",
+    "performance"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "homepage": "https://github.com/yourusername/network-throttler-pro",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/network-throttler-pro.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/network-throttler-pro/issues"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "build": "npm run zip",
+    "zip": "zip -r network-throttler-pro.zip . -x 'node_modules/*' '*.git*' 'package*.json' '*.zip'",
+    "lint": "eslint *.js",
+    "test": "echo 'No tests specified' && exit 0"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0"
+  }
+}
